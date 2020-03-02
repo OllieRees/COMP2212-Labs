@@ -1,0 +1,7 @@
+Forward 20 
+Rotate Right
+Forward 80
+Rotate Right
+Forward 100
+Rotate Left
+Done

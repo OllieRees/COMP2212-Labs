@@ -1,0 +1,4 @@
+If 2 < 3 then Rotate Right else Rotate Left
+If True then Forward 20 else Rotate Right
+If there is an Obstacle in 10 steps then Forward 4 else Forward 200
+Done

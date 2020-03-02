@@ -1,6 +1,5 @@
 {
 module Tokens where
-import System.Environment (getArgs)
 }
 
 %wrapper "basic" 
@@ -42,15 +41,4 @@ data Token =
   TokenLParen      |
   TokenRParen       
   deriving (Eq,Show)
-
-readProgram :: IO String
-readProgram = do
-  f <- getArgs
-  case length f of
-    0 -> error "No arguments provided"
-    _ -> readFile (head f)
-
-main = do
-  s <- readProgram
-  print (alexScanTokens s)
 }
