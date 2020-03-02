@@ -19,7 +19,7 @@ tokens :-
   Obstacle                                                          {(\p s -> TokenObstacle p)}
   If                                                                {(\p s -> TokenIf p)}
   then                                                              {(\p s -> TokenThen p)}
-  else                                                              {(\p s -> TokenElse p)}
+  else                                                             {(\p s -> TokenElse p)}
   @boolVal                                                          {(\p s -> TokenMDLBoolVal p (convStr2Bool s))}
   $boolOp                                                           {(\p s -> TokenMDLBoolOp p s)}
   $digit+                                                           {(\p s -> TokenMDLVar p (read s))}

@@ -3,5 +3,6 @@ Rotate Right
 Forward 80
 Rotate Right
 Forward 100
+Forward 20
 Rotate Left
 Done

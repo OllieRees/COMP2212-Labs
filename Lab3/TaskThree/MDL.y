@@ -23,16 +23,20 @@ import MDLToken
 %%
 
 MDL : forward int MDL                             { Forward $2 $3 } 
+    | forward int                                 { Forward $2 End }
     | right MDL                                   { RotateRight $2 }
+    | right                                       { RotateRight End }
     | left MDL                                    { RotateLeft $2 }
+    | left                                        { RotateLeft End }
     | obstacle int MDL                            { Obstacle $2 $3 }
+    | obstacle int                                { Obstacle $2 End }
     | if Condition then MDL else MDL              { If $2 $4 $6 }
     | done                                        { End }
 
 
 Condition : boolVal                               { BoolVal $1 }
           | int boolOp int                        { BoolOperation $2 $1 $3 }
-          | obstacle int                          { Obstacle $2 Done }
+          | obstacle int                          { Obstacle $2 End }
 
 { 
 parseError :: [Token] -> a
