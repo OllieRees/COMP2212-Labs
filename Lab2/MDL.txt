@@ -1,0 +1,3 @@
+Forward 10 steps
+Rotate Right
+If True then Forward 20 steps else Rotate Left
